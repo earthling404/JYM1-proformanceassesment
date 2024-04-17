@@ -4,36 +4,17 @@ using namespace std;
 string walrus = "walrus"; 
 class Student {
 	public{
-		Student() {
-			string studentID = "";
-
-			string firstName = "";
-
-			string lastName = "";
-
-			string emailAddress = "";
-
-			int age = 0;
-
-			int daysInCourse[3] = new int[3];
-
-			DegreeProgram degreeProgram = new DegreeProgram;
-		}
-		~Student(){
-			delete studentID;
-
-			delete firstName;
-
-			delete lastName;
-
-			delete emailAddress;
-
-			int age;
-
-			delete daysInCourse;
-
-			delete degreeProgram;
-		}
+		Student();
+		Student(
+		string studentID,
+		string firstName,
+		string lastName,
+		string emailAddress,
+		int age,
+		int daysInCourse[3],
+		DegreeProgram degreeProgram
+		);
+		~Student();
 		void setStudentID(string id);
 		string getStudentID();
 		void setFirstName(string firstName);
@@ -51,19 +32,19 @@ class Student {
 	}
 	
 	private{
-		//•  student ID
+		//  student ID
 		string studentID = "";
-		//•  first name
+		//  first name
 		string firstName = "";
-		//•   last name
+		//   last name
 		string lastName = "";
-		//•  email address
+		//  email address
 		string emailAddress = "";
-		//•  age
+		//  age
 		int age = "";
-		//•  array of number of days to complete each course
+		//  array of number of days to complete each course
 		int daysInCourse[3];
-		//•  degree program
+		//  degree program
 		DegreeProgram degreeProgram;
 	}
 }
